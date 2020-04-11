@@ -1,0 +1,150 @@
+//ticTacToe game
+
+#include<iostream>
+#include<vector>
+#include<cstdlib>
+#include<algorithm>
+#include<stdlib.h>
+
+using namespace std;
+/*
+#define MS 3
+
+class TTT
+{
+	public:
+	int arr[MS][MS]={0};
+	vector<int*> pl1;
+	vector<int*> pl2;
+
+
+		TTT()
+		{
+		}
+		void addEntry(vector<int*>&,int);
+		bool ifWinPos(int);
+		bool ifEntryExist(int*);
+		void printM();
+		int* retIntFromArray(int no);
+};
+
+int* TTT::retIntFromArray(int pos)
+{
+	int *p;
+	switch(pos)
+        {
+                case 1:
+			p = &arr[0][0];
+                        break;
+                case 2:
+			p = &arr[0][1];
+                        break;
+                case 3:
+			p = &arr[0][2];
+                        break;
+                case 4:
+			p = &arr[1][0];
+                        break;
+                case 5:
+			p = &arr[1][1];
+                        break;
+                case 6:
+			p = &arr[1][2];
+                        break;
+                case 7:
+			p = &arr[2][0];
+                        break;
+                case 8:
+			p = &arr[2][1];
+                        break;
+                case 9:
+			p = &arr[2][2];
+                        break;
+                default:
+                        return NULL;
+	}
+	return p;
+}
+
+
+bool TTT::ifWinPos(int ply)
+{
+	vector<int* > pl;
+	ply==1?pl=pl1:pl=pl2;
+        std::sort(pl.begin(),pl.end());
+        if(pl[2] - pl[1] == pl[1] - pl[0])
+		return true;
+	return false;
+}
+
+bool TTT::ifEntryExist(int* p)
+{
+	if( pl1.end() == std::find(pl1.begin(),pl1.end(), p) && pl2.end()  == std::find(pl2.begin(),pl2.end(), p) )
+		return false;
+	else 
+		return true;
+}
+
+void TTT::addEntry(vector<int*>& pl, int ply)
+{
+    int pos, F=0;
+    int *p;
+    do 
+    {   
+        F=0;	    
+	cout<<" player "<<ply<<" : pls enter your position ";
+        cin >> pos;
+	p = retIntFromArray(pos);
+	*p = ply;
+	if( ifEntryExist( p) == false )
+	  pl.push_back(p);
+	else
+	{
+	  cout<<"value already exist "<<endl;
+	  F=1;
+	}
+
+    }while( F == 1 );
+}
+
+void TTT::printM()
+{
+	system("clear");
+	for(int i=0;i<MS;i++)
+	{
+		cout<<" [ ";
+		for(int j=0;j<MS;j++)
+			cout<<arr[i][j];
+		cout<<" ]"<<endl;
+	}
+}
+*/
+int main()
+{
+	/*TTT GO;
+	int pos;
+	for(int mn=0;mn<MS;mn++)
+	{
+		GO.addEntry( GO.pl1,1 );
+		GO.printM();
+		if(mn==2 && GO.ifWinPos(1) )
+		{
+			cout<<"player 1 won "<<endl;
+			exit (0);
+		}
+		GO.addEntry( GO.pl2,2);
+		GO.printM();
+
+		if(mn==2 && GO.ifWinPos(2) )
+			cout<<"player 2 won "<<endl;
+		else if(mn == 2)
+		{
+		        cout<<"No one own"<<endl;
+                        exit (0);
+		}
+	}
+
+	*/
+cout<<"done";
+	return 0;
+}
