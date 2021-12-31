@@ -1,0 +1,64 @@
+// 1 2   1 3
+// 3 4   2 4
+
+#include<iostream>
+#define MAX 4
+using namespace std;
+int arr3[MAX][MAX]={{1,2,3},{4,5,6},{7,8,9}};
+int arr4[MAX][MAX]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+
+void printarr(int arr[MAX][MAX])
+{
+    cout<<"Matrix of size "<<MAX<<endl;
+    int j=0;
+    for(int i=0;i<MAX;i++)
+    {
+        for(j=0;j<MAX;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+}
+void reverse_matrix(int arr[MAX][MAX])
+{
+int tmp=0;
+    for(int i=0,j=0;i<MAX;i++)
+    {
+        for(j=0;j<MAX;j++)
+        {
+            if(i==j || i<j)
+                continue;
+            else
+            {
+                tmp = arr[i][j];
+                arr[i][j] = arr[j][i];
+                arr[j][i] = tmp;
+            }
+        }
+    }
+
+}
+int main()
+{
+int value;
+cout<<"how many rows and columns ?"<<endl;
+cin>>value;
+#define MAX value
+
+switch(value)
+{
+case 3:
+    printarr(arr3);
+    reverse_matrix(arr3);
+    printarr(arr3);
+    break;
+case 4:
+    printarr(arr4);
+    reverse_matrix(arr4);
+    printarr(arr4);
+    break;
+}
+    return 0;
+}
